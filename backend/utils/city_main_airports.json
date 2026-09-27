@@ -1,0 +1,187 @@
+{
+  "Delhi": {
+    "country": "India",
+    "airports": [
+      {
+        "code": "DEL",
+        "name": "Indira Gandhi International Airport"
+      }
+    ]
+  },
+  "Mumbai": {
+    "country": "India",
+    "airports": [
+      {
+        "code": "BOM",
+        "name": "Chhatrapati Shivaji Maharaj International Airport"
+      }
+    ]
+  },
+  "Bengaluru": {
+    "country": "India",
+    "airports": [
+      {
+        "code": "BLR",
+        "name": "Kempegowda International Airport"
+      }
+    ]
+  },
+  "Hyderabad": {
+    "country": "India",
+    "airports": [
+      {
+        "code": "HYD",
+        "name": "Rajiv Gandhi International Airport"
+      }
+    ]
+  },
+  "Chennai": {
+    "country": "India",
+    "airports": [
+      {
+        "code": "MAA",
+        "name": "Chennai International Airport"
+      }
+    ]
+  },
+  "Kolkata": {
+    "country": "India",
+    "airports": [
+      {
+        "code": "CCU",
+        "name": "Netaji Subhas Chandra Bose International Airport"
+      }
+    ]
+  },
+  "Pune": {
+    "country": "India",
+    "airports": [
+      {
+        "code": "PNQ",
+        "name": "Pune International Airport"
+      }
+    ]
+  },
+  "New York": {
+    "country": "United States",
+    "airports": [
+      {
+        "code": "JFK",
+        "name": "John F. Kennedy International Airport"
+      },
+      {
+        "code": "EWR",
+        "name": "Newark Liberty International Airport"
+      },
+      {
+        "code": "LGA",
+        "name": "LaGuardia Airport"
+      }
+    ]
+  },
+  "London": {
+    "country": "United Kingdom",
+    "airports": [
+      {
+        "code": "LHR",
+        "name": "London Heathrow Airport"
+      },
+      {
+        "code": "LGW",
+        "name": "London Gatwick Airport"
+      },
+      {
+        "code": "STN",
+        "name": "London Stansted Airport"
+      },
+      {
+        "code": "LTN",
+        "name": "London Luton Airport"
+      }
+    ]
+  },
+  "Dubai": {
+    "country": "United Arab Emirates",
+    "airports": [
+      {
+        "code": "DXB",
+        "name": "Dubai International Airport"
+      },
+      {
+        "code": "DWC",
+        "name": "Al Maktoum International Airport"
+      }
+    ]
+  },
+  "Singapore": {
+    "country": "Singapore",
+    "airports": [
+      {
+        "code": "SIN",
+        "name": "Singapore Changi Airport"
+      }
+    ]
+  },
+  "Tokyo": {
+    "country": "Japan",
+    "airports": [
+      {
+        "code": "HND",
+        "name": "Haneda Airport"
+      },
+      {
+        "code": "NRT",
+        "name": "Narita International Airport"
+      }
+    ]
+  },
+  "Paris": {
+    "country": "France",
+    "airports": [
+      {
+        "code": "CDG",
+        "name": "Paris Charles de Gaulle Airport"
+      },
+      {
+        "code": "ORY",
+        "name": "Paris Orly Airport"
+      }
+    ]
+  },
+  "Frankfurt": {
+    "country": "Germany",
+    "airports": [
+      {
+        "code": "FRA",
+        "name": "Frankfurt Airport"
+      }
+    ]
+  },
+  "Amsterdam": {
+    "country": "Netherlands",
+    "airports": [
+      {
+        "code": "AMS",
+        "name": "Amsterdam Airport Schiphol"
+      }
+    ]
+  },
+  "Sydney": {
+    "country": "Australia",
+    "airports": [
+      {
+        "code": "SYD",
+        "name": "Sydney Kingsford Smith Airport"
+      }
+    ]
+  },
+  "Toronto": {
+    "country": "Canada",
+    "airports": [
+      {
+        "code": "YYZ",
+        "name": "Toronto Pearson International Airport"
+      }
+    ]
+  }
+}

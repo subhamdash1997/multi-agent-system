@@ -1,0 +1,114 @@
+{
+  "India": {
+    "airport": "DEL",
+    "airport_name": "Indira Gandhi International Airport"
+  },
+  "United States": {
+    "airport": "ATL",
+    "airport_name": "Hartsfield-Jackson Atlanta International Airport"
+  },
+  "United Kingdom": {
+    "airport": "LHR",
+    "airport_name": "London Heathrow Airport"
+  },
+  "United Arab Emirates": {
+    "airport": "DXB",
+    "airport_name": "Dubai International Airport"
+  },
+  "Saudi Arabia": {
+    "airport": "RUH",
+    "airport_name": "King Khalid International Airport"
+  },
+  "Singapore": {
+    "airport": "SIN",
+    "airport_name": "Singapore Changi Airport"
+  },
+  "Japan": {
+    "airport": "HND",
+    "airport_name": "Haneda Airport"
+  },
+  "China": {
+    "airport": "PEK",
+    "airport_name": "Beijing Capital International Airport"
+  },
+  "Australia": {
+    "airport": "SYD",
+    "airport_name": "Sydney Kingsford Smith Airport"
+  },
+  "Canada": {
+    "airport": "YYZ",
+    "airport_name": "Toronto Pearson International Airport"
+  },
+  "France": {
+    "airport": "CDG",
+    "airport_name": "Paris Charles de Gaulle Airport"
+  },
+  "Germany": {
+    "airport": "FRA",
+    "airport_name": "Frankfurt Airport"
+  },
+  "Italy": {
+    "airport": "FCO",
+    "airport_name": "Leonardo da Vinci–Fiumicino Airport"
+  },
+  "Spain": {
+    "airport": "MAD",
+    "airport_name": "Adolfo Suárez Madrid–Barajas Airport"
+  },
+  "Brazil": {
+    "airport": "GRU",
+    "airport_name": "São Paulo–Guarulhos International Airport"
+  },
+  "South Africa": {
+    "airport": "JNB",
+    "airport_name": "O. R. Tambo International Airport"
+  },
+  "Thailand": {
+    "airport": "BKK",
+    "airport_name": "Suvarnabhumi Airport"
+  },
+  "Malaysia": {
+    "airport": "KUL",
+    "airport_name": "Kuala Lumpur International Airport"
+  },
+  "Indonesia": {
+    "airport": "CGK",
+    "airport_name": "Soekarno–Hatta International Airport"
+  },
+  "South Korea": {
+    "airport": "ICN",
+    "airport_name": "Incheon International Airport"
+  },
+  "Qatar": {
+    "airport": "DOH",
+    "airport_name": "Hamad International Airport"
+  },
+  "Turkey": {
+    "airport": "IST",
+    "airport_name": "Istanbul Airport"
+  },
+  "Egypt": {
+    "airport": "CAI",
+    "airport_name": "Cairo International Airport"
+  },
+  "Netherlands": {
+    "airport": "AMS",
+    "airport_name": "Amsterdam Airport Schiphol"
+  },
+  "Switzerland": {
+    "airport": "ZRH",
+    "airport_name": "Zurich Airport"
+  },
+  "New Zealand": {
+    "airport": "AKL",
+    "airport_name": "Auckland Airport"
+  },
+  "Mexico": {
+    "airport": "MEX",
+    "airport_name": "Mexico City International Airport"
+  },
+  "Argentina": {
+    "airport": "EZE",
+    "airport_name": "Ezeiza International Airport"
+  }
+}

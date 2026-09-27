@@ -1,0 +1,315 @@
+{
+  "India": [
+    "India",
+    "Bharat",
+    "IN",
+    "IND"
+  ],
+  "United States": [
+    "United States",
+    "USA",
+    "US",
+    "America"
+  ],
+  "United Kingdom": [
+    "United Kingdom",
+    "UK",
+    "GB",
+    "Britain"
+  ],
+  "United Arab Emirates": [
+    "United Arab Emirates",
+    "UAE",
+    "AE",
+    "Emirates"
+  ],
+  "Saudi Arabia": [
+    "Saudi Arabia",
+    "KSA",
+    "SA"
+  ],
+  "South Korea": [
+    "South Korea",
+    "Korea",
+    "Republic of Korea",
+    "KR",
+    "KOR"
+  ],
+  "North Korea": [
+    "North Korea",
+    "DPRK",
+    "KP",
+    "PRK"
+  ],
+  "Russia": [
+    "Russia",
+    "Russian Federation",
+    "RU",
+    "RUS"
+  ],
+  "China": [
+    "China",
+    "PRC",
+    "CN",
+    "CHN"
+  ],
+  "Japan": [
+    "Japan",
+    "Nippon",
+    "JP",
+    "JPN"
+  ],
+  "Germany": [
+    "Germany",
+    "Deutschland",
+    "DE",
+    "DEU"
+  ],
+  "France": [
+    "France",
+    "French Republic",
+    "FR",
+    "FRA"
+  ],
+  "Italy": [
+    "Italy",
+    "Italian Republic",
+    "IT",
+    "ITA"
+  ],
+  "Canada": [
+    "Canada",
+    "CA",
+    "CAN"
+  ],
+  "Australia": [
+    "Australia",
+    "AU",
+    "AUS"
+  ],
+  "New Zealand": [
+    "New Zealand",
+    "NZ",
+    "NZL"
+  ],
+  "Brazil": [
+    "Brazil",
+    "Brasil",
+    "BR",
+    "BRA"
+  ],
+  "South Africa": [
+    "South Africa",
+    "RSA",
+    "ZA",
+    "ZAF"
+  ],
+  "Mexico": [
+    "Mexico",
+    "MX",
+    "MEX"
+  ],
+  "Argentina": [
+    "Argentina",
+    "Argentine Republic",
+    "AR",
+    "ARG"
+  ],
+  "Bangladesh": [
+    "Bangladesh",
+    "BD",
+    "BD",
+    "BGD"
+  ],
+  "Pakistan": [
+    "Pakistan",
+    "PK",
+    "PAK"
+  ],
+  "Sri Lanka": [
+    "Sri Lanka",
+    "Ceylon",
+    "LK",
+    "LKA"
+  ],
+  "Nepal": [
+    "Nepal",
+    "NP",
+    "NPL"
+  ],
+  "Singapore": [
+    "Singapore",
+    "SG",
+    "SGP"
+  ],
+  "Malaysia": [
+    "Malaysia",
+    "MY",
+    "MYS"
+  ],
+  "Indonesia": [
+    "Indonesia",
+    "ID",
+    "IDN"
+  ],
+  "Thailand": [
+    "Thailand",
+    "Siam",
+    "TH",
+    "THA"
+  ],
+  "Vietnam": [
+    "Vietnam",
+    "Viet Nam",
+    "VN",
+    "VNM"
+  ],
+  "Philippines": [
+    "Philippines",
+    "PH",
+    "PHL"
+  ],
+  "Myanmar": [
+    "Myanmar",
+    "Burma",
+    "MM",
+    "MMR"
+  ],
+  "Iran": [
+    "Iran",
+    "Islamic Republic of Iran",
+    "IR",
+    "IRN"
+  ],
+  "Iraq": [
+    "Iraq",
+    "IQ",
+    "IRQ"
+  ],
+  "Turkey": [
+    "Turkey",
+    "Türkiye",
+    "TR",
+    "TUR"
+  ],
+  "Egypt": [
+    "Egypt",
+    "Arab Republic of Egypt",
+    "EG",
+    "EGY"
+  ],
+  "Israel": [
+    "Israel",
+    "IL",
+    "ISR"
+  ],
+  "Qatar": [
+    "Qatar",
+    "QA",
+    "QAT"
+  ],
+  "Kuwait": [
+    "Kuwait",
+    "KW",
+    "KWT"
+  ],
+  "Oman": [
+    "Oman",
+    "OM",
+    "OMN"
+  ],
+  "Bahrain": [
+    "Bahrain",
+    "BH",
+    "BHR"
+  ],
+  "Nigeria": [
+    "Nigeria",
+    "NG",
+    "NGA"
+  ],
+  "Kenya": [
+    "Kenya",
+    "KE",
+    "KEN"
+  ],
+  "Ghana": [
+    "Ghana",
+    "GH",
+    "GHA"
+  ],
+  "Ethiopia": [
+    "Ethiopia",
+    "ET",
+    "ETH"
+  ],
+  "Morocco": [
+    "Morocco",
+    "MA",
+    "MAR"
+  ],
+  "Spain": [
+    "Spain",
+    "Kingdom of Spain",
+    "ES",
+    "ESP"
+  ],
+  "Portugal": [
+    "Portugal",
+    "Portuguese Republic",
+    "PT",
+    "PRT"
+  ],
+  "Netherlands": [
+    "Netherlands",
+    "Holland",
+    "NL",
+    "NLD"
+  ],
+  "Switzerland": [
+    "Switzerland",
+    "Swiss Confederation",
+    "CH",
+    "CHE"
+  ],
+  "Sweden": [
+    "Sweden",
+    "SE",
+    "SWE"
+  ],
+  "Norway": [
+    "Norway",
+    "NO",
+    "NOR"
+  ],
+  "Denmark": [
+    "Denmark",
+    "DK",
+    "DNK"
+  ],
+  "Finland": [
+    "Finland",
+    "FI",
+    "FIN"
+  ],
+  "Poland": [
+    "Poland",
+    "PL",
+    "POL"
+  ],
+  "Ukraine": [
+    "Ukraine",
+    "UA",
+    "UKR"
+  ],
+  "Greece": [
+    "Greece",
+    "GR",
+    "GRC"
+  ],
+  "Ireland": [
+    "Ireland",
+    "IE",
+    "IRL"
+  ]
+}
