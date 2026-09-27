@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { MapPinned, Plane, Sparkles, Search, Send, Globe2 } from "lucide-react";
+import { MapPinned, Plane, Sparkles, Search, Send, Globe2, LoaderCircle, AlertCircle } from "lucide-react";
 import "./styles.css";
+
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 const examples = [
   "Plan a complete 7 days Japan trip from India under 2 lakhs...",
@@ -9,10 +11,21 @@ const examples = [
   "Find global flight options and build a complete itinerary..."
 ];
 
+const createThreadId = () => {
+  if (typeof crypto !== "undefined" && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+
+  return `thread-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+};
+
 function App() {
-  const [prompt, setPrompt] = useState(examples[0]);
-  const [active, setActive] = useState("Japan Trip");
-  const [generated, setGenerated] = useState(false);
+  const [prompt, setPrompt] = useState("");
+  const [active, setActive] = useState(null);
+  const [result, setResult] = useState(null);
+  const [threadId, setThreadId] = useState(() => createThreadId());
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const chips = [
     { label: "Japan Trip", icon: <MapPinned size={12} /> },
@@ -21,9 +34,47 @@ function App() {
     { label: "Global Flights", icon: <Search size={12} /> }
   ];
 
-  const handleGenerate = () => {
-    setGenerated(true);
-    setTimeout(() => setGenerated(false), 1800);
+  const handleGenerate = async (event) => {
+    event.preventDefault();
+    const userInput = prompt.trim();
+
+    if (!userInput || loading) {
+      setError("Enter a travel request before generating a plan.");
+      return;
+    }
+
+    const requestThreadId = threadId || createThreadId();
+    if (!threadId) {
+      setThreadId(requestThreadId);
+    }
+
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch(`${API_URL}/api/travel`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user_input: userInput, thread_id: requestThreadId }),
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        const detail = typeof data.detail === "string"
+          ? data.detail
+          : "The travel API could not create a plan.";
+        throw new Error(response.status === 429
+          ? `${detail} Please wait a minute and try again.`
+          : detail);
+      }
+
+      setResult(data);
+      setThreadId(data.thread_id);
+    } catch (requestError) {
+      setError(requestError.message || "Unable to connect to the travel API.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const selectChip = (label) => {
@@ -53,15 +104,15 @@ function App() {
           LangGraph system.
         </p>
 
-        <div className="planner-card">
+        <form className="planner-card" onSubmit={handleGenerate}>
           <div className="planner-top">
             <div>
               <h2>Where do you want to go?</h2>
-              <p>Example: Plan a complete 7 days Japan trip from India under 2 lakhs...</p>
+              <p>Plan your trip</p>
             </div>
-            <div className="online-pill">
+            <div className={`online-pill ${loading ? "working" : ""}`}>
               <span className="online-dot" />
-              Online
+              {loading ? "Planning" : "API ready"}
             </div>
           </div>
 
@@ -79,9 +130,9 @@ function App() {
               </div>
             </div>
 
-            <button className={`generate-btn ${generated ? "success" : ""}`} onClick={handleGenerate}>
-              <span>{generated ? "Plan Ready" : "Generate Plan"}</span>
-              {generated ? <Sparkles size={17} /> : <Send size={15} />}
+            <button className="generate-btn" type="submit" disabled={loading}>
+              <span>{loading ? "Building plan" : "Generate Plan"}</span>
+              {loading ? <LoaderCircle className="spin" size={17} /> : <Send size={15} />}
             </button>
           </div>
 
@@ -97,7 +148,33 @@ function App() {
               </button>
             ))}
           </div>
-        </div>
+          {error && (
+            <div className="error-banner" role="alert">
+              <AlertCircle size={16} />
+              <span>{error}</span>
+            </div>
+          )}
+        </form>
+
+        {result && (
+          <section className="results-panel" aria-live="polite">
+            <div className="results-heading">
+              <div>
+                <span className="results-kicker">Your TripMate brief</span>
+                <h2>Plan generated</h2>
+              </div>
+              <span className="call-count">{result.llm_calls} agent calls</span>
+            </div>
+            <article className="answer-block">
+              <pre>{result.answer}</pre>
+            </article>
+            <div className="result-grid">
+              <article className="result-card"><h3>Flights</h3><pre>{result.flight_results || "No flight details returned."}</pre></article>
+              <article className="result-card"><h3>Hotels</h3><pre>{result.hotel_results || "No hotel details returned."}</pre></article>
+              <article className="result-card"><h3>Itinerary</h3><pre>{result.itinerary || "No itinerary returned."}</pre></article>
+            </div>
+          </section>
+        )}
 
         <div className="tech-line">
           <span>Built with FastAPI, LangGraph, Groq, PostgreSQL, Tavily and AviationStack</span>

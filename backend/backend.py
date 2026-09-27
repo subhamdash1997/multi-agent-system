@@ -23,8 +23,22 @@ from langchain_core.messages import (
     SystemMessage,
 )
 from langchain_groq import ChatGroq
+from groq import RateLimitError
 from tools.tavily_tool import tavily_search
 from tools.flight_tool import search_flights
+
+
+class GroqRateLimitError(RuntimeError):
+    """Raised when Groq rejects a request because the account quota is exhausted."""
+
+
+def invoke_llm(messages):
+    try:
+        return llm.invoke(messages)
+    except RateLimitError as error:
+        raise GroqRateLimitError(
+            "Groq token limit reached. Wait for the quota to reset or use a Groq Dev Tier key."
+        ) from error
 
 
 def get_database_url():
@@ -106,29 +120,9 @@ def hotel_agent(state: TravelState):
 # =========================
 
 def itinerary_agent(state: TravelState):
-    prompt = f"""
-Create a complete travel itinerary.
-
-User Query:
-{state['user_query']}
-
-Flight Results:
-{state['flight_results']}
-
-Hotel Results:
-{state['hotel_results']}
-
-Make the itinerary practical, budget-aware, and easy to follow.
-"""
-
-    response = llm.invoke([
-        SystemMessage(content="You are an expert travel planner."),
-        HumanMessage(content=prompt)
-    ])
-
     return {
-        "itinerary": response.content,
-        "messages": [response],
+        "itinerary": "Create the day-by-day itinerary using the flight and hotel information below.",
+        "messages": [AIMessage(content="Travel research collected.")],
         "llm_calls": state.get("llm_calls", 0) + 1
     }
 
@@ -168,7 +162,7 @@ Important:
 - Keep the response useful for real travel planning.
 """
 
-    response = llm.invoke([
+    response = invoke_llm([
         SystemMessage(content="You are a professional AI travel booking assistant."),
         HumanMessage(content=final_prompt)
     ])

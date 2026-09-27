@@ -4,7 +4,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, field_validator
 
-from backend import run_travel_agent
+from backend import GroqRateLimitError, run_travel_agent
 
 
 class TravelRequest(BaseModel):
@@ -76,6 +76,12 @@ def create_travel_plan(request: TravelRequest) -> dict[str, Any]:
 			user_input=request.user_input.strip(),
 			thread_id=request.thread_id,
 		)
+	except GroqRateLimitError as error:
+		raise HTTPException(
+			status_code=429,
+			detail=str(error),
+			headers={"Retry-After": "60"},
+		) from error
 	except Exception as error:
 		raise HTTPException(
 			status_code=502,
