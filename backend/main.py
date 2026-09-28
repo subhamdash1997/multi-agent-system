@@ -6,6 +6,9 @@ from pydantic import BaseModel, Field, field_validator
 
 from backend import GroqRateLimitError, run_travel_agent
 
+import nest_asyncio
+nest_asyncio.apply()
+
 
 class TravelRequest(BaseModel):
 	user_input: str = Field(
